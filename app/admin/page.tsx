@@ -1,9 +1,11 @@
 import React from 'react'
 
-function Page() {
+function page() {
   return (
-    <div>Adiministrador</div>
+    <div>
+        
+    </div>
   )
 }
 
-export default Page
+export default page
