@@ -21,9 +21,9 @@ function NavLinks() {
           key={link.name}
           href={link.href}
           className={clsx(
-            "rounded-lg w-full md:px-2 md:py-4  text-center bg-zinc-200  hover:bg-red-700 hover:text-white",
+            "rounded-lg w-full md:px-2 md:py-4  text-center shadow-lg  hover:bg-red-700 hover:text-white",
             {
-              " text-white bg-[rgb(185,28,28)]": pathaname === link.href,
+              " bg-red-700 text-white": pathaname === link.href,
             }
           )}
         >
