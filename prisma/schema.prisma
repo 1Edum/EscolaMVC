@@ -16,6 +16,7 @@ model Student {
   password String
   roomId   String @db.ObjectId
   room     Room   @relation(fields: [roomId], references: [id])
+  registrationMonth DateTime @default(now())
 }
 
 model Room {
