@@ -26,7 +26,11 @@ export default function Header() {
         priority
         quality={100}
       />
-      
+      <div className="-order-1">
+        <Menu open={open} setOpen={setOpen} />
+        <Burger open={open} setOpen={setOpen} />
+      </div>
+      <Button>Entrar</Button>
     </header>
   );
 }
