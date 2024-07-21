@@ -5,6 +5,7 @@ import Image from "next/image";
 import Button from "./button";
 import Menu from "./menu/menu";
 import Burger from "./menu/burger";
+import Logo from "./logo";
 
 const links = [
   { name: "Home", href: "/" },
@@ -16,21 +17,12 @@ const links = [
 export default function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="h-[12vh] py-2 flex items-center px-4 justify-between shadow-xl border-b border-zinc-200">
-      <Image
-        src={"/logo-emvc.png"}
-        alt="Logo Escola MVC"
-        height={200}
-        width={120}
-        className="rounded "
-        priority
-        quality={100}
-      />
-      <div className="-order-1">
+    <header className="h-[12vh] py-2  md:px-7 flex items-center px-4 justify-between shadow-xl border-b border-zinc-200">
+      <Logo className={"w-56"}/>
+      <div>
         <Menu open={open} setOpen={setOpen} />
         <Burger open={open} setOpen={setOpen} />
       </div>
-      <Button>Entrar</Button>
     </header>
   );
 }
